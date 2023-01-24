@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - FxTemporaire
+  - Hazard
+  - Ground
+  - Projectile
+  - Goal
+  - Girl
+  - Rope
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - Enemy
+  - Damage
+  - IgnorePlayer
+  - Ground Objects
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround B
+    uniqueID: 2090425459
+    locked: 0
+  - name: Background F
+    uniqueID: 3228827359
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: ForeGround B
+    uniqueID: 2320714355
+    locked: 0
+  - name: ForeGround F
+    uniqueID: 4046468359
+    locked: 0

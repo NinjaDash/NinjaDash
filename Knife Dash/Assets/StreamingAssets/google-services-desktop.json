@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "151041174150",
+    "firebase_url": "https://newninjaslash-default-rtdb.firebaseio.com",
+    "project_id": "newninjaslash",
+    "storage_bucket": "newninjaslash.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151041174150:android:500c6ae959a93a7f2eff07",
+        "android_client_info": {
+          "package_name": "com.tgs.ninjaslashmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151041174150-86tmfkj8sn3na2cqdr4mjo6tnvoampo2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tgs.ninjaslashmobile",
+            "certificate_hash": "593b298ec5ef98dc48e04117dfd13d8b32335708"
+          }
+        },
+        {
+          "client_id": "151041174150-v4b2akbnm0nb4sekjicsrr903uthiv93.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tgs.ninjaslashmobile",
+            "certificate_hash": "af7d3e35a2a532a13fb27e80659112e8c933180c"
+          }
+        },
+        {
+          "client_id": "151041174150-9bdt1jerkotp7oaveftaolf0gg0032fs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt7FJ8Gr7EtXHyB8dVmhl2TISELWRrm2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151041174150-9bdt1jerkotp7oaveftaolf0gg0032fs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
