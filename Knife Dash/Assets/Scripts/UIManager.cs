@@ -26,6 +26,10 @@ public class UIManager : MonoBehaviour
     Coroutine CO_missionText;
     #endregion
 
+    public string username;
+    public int user_char;
+
+
     public RectTransform CanvasMain;
     public TextMeshProUGUI healthBar;
     public GameObject DoorIsCloseIcon;
@@ -63,7 +67,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button NextDialogueButton;
     [SerializeField] TextMeshProUGUI DialogueBox;
     [SerializeField] Queue<String> Dialogue_Sentences = new Queue<string>();
-    internal static string username;
+    
 
 
     #region dialogue System
@@ -413,6 +417,11 @@ public class UIManager : MonoBehaviour
         CanvasGroup CG = NoInteractionPopUp.GetComponent<CanvasGroup>();
         LeanTween.alphaCanvas(CG, 1, 1).setFrom(0).setOnComplete(() => LeanTween.alphaCanvas(CG, 0, 1).setDelay(duration));
     }
+    
+    #endregion
+    #region Coin Texts
+    
+    [SerializeField] TMP_Text[] token_texts;
     public void SetCoinText()
     {
         LocalData data = DatabaseManager.Instance.GetLocalData();
@@ -424,5 +433,114 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+    public void SetTokenBalanceText()
+    {
+        for (int i = 0; i < token_texts.Length; i++)
+        {
+            token_texts[i].text = CoreWeb3Manager.userTokenBalance;
+        }
+    }
     #endregion
+
+    #region Edit Profile Section
+    [SerializeField] Toggle[] char_toggles;
+    [SerializeField] TMP_InputField name_input;
+    [SerializeField] GameObject start_ui_btns;
+    [SerializeField] GameObject editprofile_ui;
+    public void OpenEditProfile()
+    {
+        LocalData data = DatabaseManager.Instance.GetLocalData();
+
+        name_input.text = data.name;
+        for (int i = 0; i < char_toggles.Length; i++)
+        {
+            if (i == data.SelectedSkin)
+            {
+                char_toggles[data.SelectedSkin].isOn = true;
+                break;
+            }
+        }
+
+        start_ui_btns.SetActive(false);
+        editprofile_ui.SetActive(true);
+    }
+    public void SetProfile()
+    {
+        if (string.IsNullOrEmpty(name_input.text)) return;
+
+        LocalData data = DatabaseManager.Instance.GetLocalData();
+
+        data.name = name_input.text;
+        for (int i = 0; i < char_toggles.Length; i++)
+        {
+            if (char_toggles[i].isOn)
+            {
+                data.SelectedSkin = i;
+                break;
+            }
+        }
+        DatabaseManager.Instance.UpdateData(data);
+
+
+        start_ui_btns.SetActive(true);
+        editprofile_ui.SetActive(false);
+        UpdateUserName(data.name, SingletonDataManager.userethAdd);
+    }
+
+    #endregion
+    [Space(20f)]
+    [Header("Informaion (Login)")]
+    [SerializeField] TMP_Text usernameText;
+    [SerializeField] TMP_Text statusText;
+    public void UpdateUserName(string _name, string _ethad = null)
+    {
+        if (_ethad != null)
+        {
+            usernameText.text = "Hi, " + _name + "\n  Your crypto address is : " + _ethad;
+            username = _name;
+        }
+        else usernameText.text = _name;
+    }
+
+    [Header("Informaion (InGame)")]
+    [SerializeField] GameObject information_box;
+    [SerializeField] TMP_Text information_text;
+    [SerializeField] Image information_image;
+    Coroutine info_coroutine;
+    public void ShowInformationMsg(string msg, float time, Sprite image = null)
+    {
+        if (image != null)
+        {
+            information_image.sprite = image;
+            information_image.gameObject.SetActive(true);
+        }
+        else
+        {
+            information_image.gameObject.SetActive(false);
+        }
+
+        information_text.text = msg;
+
+        if (info_coroutine != null)
+        {
+            StopCoroutine(info_coroutine);
+        }
+        info_coroutine = StartCoroutine(disableInformationMsg(time));
+    }
+    IEnumerator disableInformationMsg(float time)
+    {
+        LeanTween.cancel(information_box);
+
+        information_box.SetActive(true);
+        LeanTween.scaleY(information_box, 1, 0.15f).setFrom(0);
+        // AudioManager.Instance.playSound(0);
+
+        yield return new WaitForSeconds(time);
+
+        LeanTween.scaleY(information_box, 0, 0.15f).setOnComplete(() => {
+            information_box.SetActive(false);
+        });
+
+
+    }
 }

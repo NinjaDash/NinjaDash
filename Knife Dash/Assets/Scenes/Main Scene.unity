@@ -3081,7 +3081,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1761561323}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AdController, Assembly-CSharp
         m_MethodName: UserChoseToWatchAd
         m_Mode: 3
@@ -16428,7 +16428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1761561323}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AdController, Assembly-CSharp
         m_MethodName: UserChoseToWatchAd
         m_Mode: 3
@@ -21257,7 +21257,7 @@ RectTransform:
   m_Children:
   - {fileID: 208749731}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28947,36 +28947,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312817467}
   m_CullTransparentMesh: 1
---- !u!1 &1317823683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1317823684}
-  m_Layer: 0
-  m_Name: IAPUtil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1317823684
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317823683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321838941
 GameObject:
   m_ObjectHideFlags: 0
@@ -33911,6 +33881,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563051210}
   m_CullTransparentMesh: 1
+--- !u!1 &1563106162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563106164}
+  - component: {fileID: 1563106163}
+  m_Layer: 0
+  m_Name: SingletonDataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1563106163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563106162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd38673f0b3681438afe343d9469bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherPlayerNFTData: []
+  jsonData: 
+--- !u!4 &1563106164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563106162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 331.125, y: 27.59375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1576625140
 GameObject:
   m_ObjectHideFlags: 0
@@ -37958,51 +37973,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759251726}
   m_CullTransparentMesh: 1
---- !u!1 &1761561322
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1761561324}
-  - component: {fileID: 1761561323}
-  m_Layer: 0
-  m_Name: ADController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1761561323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761561322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab213d50fb2e6e44afd1189a73cdc51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSdkReady: 0
-  rewardType: 0
---- !u!4 &1761561324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761561322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1766891305
 GameObject:
   m_ObjectHideFlags: 0
@@ -38081,6 +38051,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766891305}
   m_CullTransparentMesh: 1
+--- !u!1 &1769766166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769766167}
+  m_Layer: 0
+  m_Name: BlockChainManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1769766167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769766166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 331.125, y: 27.59375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1777403392
 GameObject:
   m_ObjectHideFlags: 0
@@ -38441,7 +38441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787338831
 GameObject:
@@ -40255,7 +40255,7 @@ RectTransform:
   - {fileID: 443559144}
   - {fileID: 2128843839}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -41182,7 +41182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973923670
 GameObject:
@@ -44421,7 +44421,7 @@ RectTransform:
   - {fileID: 2102692568}
   - {fileID: 476803128}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -44440,6 +44440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acaf87a6cb2789448f813b3cf31ef94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  username: 
+  user_char: 0
   CanvasMain: {fileID: 2093933419}
   healthBar: {fileID: 302229161}
   DoorIsCloseIcon: {fileID: 1448767022}
@@ -44521,6 +44523,16 @@ MonoBehaviour:
   WrongPic: {fileID: 1482841089671835399, guid: 25e9dbda12d347c4c898b5e7b85ad626, type: 3}
   RewardAmount: 0
   RewardText: {fileID: 289969990}
+  token_texts: []
+  char_toggles: []
+  name_input: {fileID: 0}
+  start_ui_btns: {fileID: 0}
+  editprofile_ui: {fileID: 0}
+  usernameText: {fileID: 0}
+  statusText: {fileID: 0}
+  information_box: {fileID: 0}
+  information_text: {fileID: 0}
+  information_image: {fileID: 0}
 --- !u!1 &2095347937
 GameObject:
   m_ObjectHideFlags: 0
@@ -44550,7 +44562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2095347939
 MonoBehaviour:
@@ -44561,7 +44573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095347937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 466d26b209156e34c8060e94409b58e8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3efe1bdee0f2ad41a1de1921d5d794a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data:
@@ -44573,6 +44585,9 @@ MonoBehaviour:
     PurchasedSkinsID: 
     StarsPerLevel: 
     AdRemovalPurchased: 0
+    transactionsInformation: []
+    last_spin_time: 0
+  allMetaDataServer: []
 --- !u!1 &2101944609
 GameObject:
   m_ObjectHideFlags: 0

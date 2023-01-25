@@ -46,9 +46,7 @@ public class LoginManager : MonoBehaviour
         
     }
     public void OnSignInClicked()
-    {
-       
-
+    {   
         LoadingPanel.SetActive(false);
         UIManager.Instance.gameObject.SetActive(true);
         this.gameObject.SetActive(false);

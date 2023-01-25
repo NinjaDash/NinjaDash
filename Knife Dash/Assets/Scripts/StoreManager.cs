@@ -18,8 +18,7 @@ public class StoreManager : MonoBehaviour
     #endregion
     public List<GameObject> Skins = new List<GameObject>();    
     public GameObject CoinShopPanel;
-    public TextMeshProUGUI[] skinStatusText;
-    public GameObject AdRemover;
+    public TextMeshProUGUI[] skinStatusText;    
     public List<int> skinPrices = new List<int>();
 
     private void Start()
@@ -62,13 +61,7 @@ public class StoreManager : MonoBehaviour
         CoinShopPanel.SetActive(true);
     }
 
-    public void RemoveAds()
-    {
-        Debug.Log("Remove Ads Here");
-        AdRemover.SetActive(false);
-        
-    }
-
+  
     public void CoinPack(int ID)
     {
         Debug.Log("Selected Coin pack num" + ID);
