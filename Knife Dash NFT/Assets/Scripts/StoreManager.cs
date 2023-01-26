@@ -31,7 +31,7 @@ public class StoreManager : MonoBehaviour
     public void SelectSkin(int ID)
     {
         LocalData data = DatabaseManager.Instance.GetLocalData();
-        if(data.PurchasedSkinsID.Contains(ID))
+        if(MyNFTCollection.insta.AvailableSkins.Contains(ID))
         {
             Debug.Log("Skin Selected");
             data.SelectedSkin = ID;
@@ -41,11 +41,11 @@ public class StoreManager : MonoBehaviour
             int cost = skinPrices[ID];            
             if (data.coins >= cost)
             {
-                Debug.Log("0 got added" + ID);
-                data.coins -= cost;
-                data.PurchasedSkinsID.Add(ID);
-                data.SelectedSkin = ID;
-                Debug.Log("Purchase Successful");
+                Debug.Log("0 got added" + ID);                
+                //data.SelectedSkin = ID;
+                CoreWeb3Manager.Instance.purchaseItem(ID-1);
+
+              
             }
             else
             {
@@ -72,7 +72,31 @@ public class StoreManager : MonoBehaviour
         LocalData data = DatabaseManager.Instance.GetLocalData();
         for (int i = 0; i < skinStatusText.Length; i++)
         {
-            if(data.PurchasedSkinsID.Contains(i))
+            if (MyNFTCollection.insta.AvailableSkins.Contains(i))
+            {
+                if (data.SelectedSkin == i)
+                {
+                    skinStatusText[i].text = "Selected";
+                }
+                else
+                {
+                    skinStatusText[i].text = "Select";
+                }
+                skinStatusText[i].transform.GetChild(0).gameObject.SetActive(false);
+            }
+            else
+            {
+                skinStatusText[i].text = "Buy";
+            }
+        }
+        UIManager.Instance.SetCoinText();
+    }
+    public void RefreshSkinsStatus(List<int> availableSkins)
+    {
+        LocalData data = DatabaseManager.Instance.GetLocalData();
+        for (int i = 0; i < skinStatusText.Length; i++)
+        {
+            if(availableSkins.Contains(i))
             {
                 if (data.SelectedSkin == i)
                 {

@@ -442,8 +442,7 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
-    #region Edit Profile Section
-    [SerializeField] Toggle[] char_toggles;
+    #region Edit Profile Section    
     [SerializeField] TMP_InputField name_input;
     [SerializeField] GameObject start_ui_btns;
     [SerializeField] GameObject editprofile_ui;
@@ -451,15 +450,7 @@ public class UIManager : MonoBehaviour
     {
         LocalData data = DatabaseManager.Instance.GetLocalData();
 
-        name_input.text = data.name;
-        for (int i = 0; i < char_toggles.Length; i++)
-        {
-            if (i == data.SelectedSkin)
-            {
-                char_toggles[data.SelectedSkin].isOn = true;
-                break;
-            }
-        }
+        name_input.text = data.name;       
 
         start_ui_btns.SetActive(false);
         editprofile_ui.SetActive(true);
@@ -471,14 +462,7 @@ public class UIManager : MonoBehaviour
         LocalData data = DatabaseManager.Instance.GetLocalData();
 
         data.name = name_input.text;
-        for (int i = 0; i < char_toggles.Length; i++)
-        {
-            if (char_toggles[i].isOn)
-            {
-                data.SelectedSkin = i;
-                break;
-            }
-        }
+       
         DatabaseManager.Instance.UpdateData(data);
 
 

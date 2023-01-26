@@ -60,8 +60,12 @@ public class DatabaseManager : MonoBehaviour
                 else
                 {
                     data = new LocalData();
-                   
-                    
+
+                    data.StarsPerLevel = new List<int>();
+                    for (int i = 0; i < 50; i++)
+                    {
+                        data.StarsPerLevel.Add(0);
+                    }
                     data.name = "Player" + UnityEngine.Random.Range(0,99999).ToString();
 
                     
@@ -415,7 +419,7 @@ public class LocalData
     public int FinishedLevels = 0;
     public int SelectedSkin = 0;
 
-    public List<int> PurchasedSkinsID = new List<int>();
+    
     public List<int> StarsPerLevel = new List<int>();
     public bool AdRemovalPurchased = false;
     public List<TranscationInfo> transactionsInformation = new List<TranscationInfo>();
@@ -428,7 +432,7 @@ public class LocalData
         highscore = 0;
         FinishedLevels = 0;
         SelectedSkin = 0;
-        PurchasedSkinsID = new List<int>();
+        
         StarsPerLevel = new List<int>();
         AdRemovalPurchased = false;
         transactionsInformation = new List<TranscationInfo>();

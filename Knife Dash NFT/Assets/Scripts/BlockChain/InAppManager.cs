@@ -8,8 +8,10 @@ public class InAppManager : MonoBehaviour
     public static InAppManager Instance;
     private void Awake()
     {
-        Instance = this;
+        Instance = this;        
     }
+
+    [SerializeField] TMP_Text[] priceTexts;
 
     async void OnEnable()
     {
@@ -18,7 +20,13 @@ public class InAppManager : MonoBehaviour
         if (CoreWeb3Manager.Instance)
         {
             CoreWeb3Manager.Instance.CheckUserBalance();
+
+            for (int i = 0; i < priceTexts.Length; i++)
+            {
+                priceTexts[i].text = CoreWeb3Manager.Instance.coinCost[i].ToString();
+            }
         }
+        
         SetBalanceText();
     }
 

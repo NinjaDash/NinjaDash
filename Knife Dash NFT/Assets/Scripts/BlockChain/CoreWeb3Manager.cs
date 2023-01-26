@@ -34,13 +34,13 @@ public class CoreWeb3Manager : MonoBehaviour
    
 
     // address of contract
-    public const string contract = "0x27015D7B4aee78Ab0356B6b07Fa2736020751a97";
-    public const string contractToken = "0xf0c285bd506aED1bC737346752D4401EcFc9bFFC";
+    public const string contract = "0x8ECB1a0f5fB3D989420da04530Ba050eD5bdD9CA";
+    public const string contractToken = "0x144F30DD3e1D41313a33E4129A232EEB7e3B5d45";
 
     const string chain = "";
     const string network = "";
-    const string chainId = "1313161555";
-    static string networkRPC= "https://testnet.aurora.dev/";
+    const string chainId = "3141";
+    static string networkRPC= "https://api.hyperspace.node.glif.io/rpc/v0";
 
 
 
@@ -290,11 +290,11 @@ public class CoreWeb3Manager : MonoBehaviour
 
             if (MyNFTCollection.insta)
             {
-                MyNFTCollection.insta.DeductCoins(DatabaseManager.Instance.allMetaDataServer[_no + 1].cost);              
+                MyNFTCollection.insta.DeductCoins(DatabaseManager.Instance.allMetaDataServer[_no].cost);              
                
 
                 MyNFTCollection.insta.DisableLastSelectedButton();
-                MyNFTCollection.insta.SetNewData(false);
+                MyNFTCollection.insta.SetNewData();
             }
 
             
@@ -553,7 +553,7 @@ public class CoreWeb3Manager : MonoBehaviour
 
     #region NFTUploaded
 
-    public void purchaseItem(int _id, bool _skin)
+    public void purchaseItem(int _id)
     {
         Debug.Log("purchaseItem");
 
