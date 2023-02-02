@@ -328,7 +328,7 @@ public partial class @KnifeDash : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2f6a3ea8-bbe8-4112-baab-6947e87d7aac"",
-                    ""path"": ""<Keyboard>/leftShift"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

@@ -319,14 +319,15 @@ public class UIManager : MonoBehaviour
             if (RewardAmount > 0) RewardText.gameObject.SetActive(true);
             LeanTween.value(0, RewardAmount, 2).setEaseInQuad().setOnUpdate((float value) => RewardText.text = "+" + value.ToString("F0"));
             yield return new WaitForSeconds(2);
-            LeanTween.moveLocalX(GameOverObjectsPanel.gameObject, GameOverObjectsPanel.anchoredPosition.x - 225, 1)/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
+            LeanTween.move(GameOverObjectsPanel,new Vector2( GameOverObjectsPanel.anchoredPosition.x - 225, GameOverObjectsPanel.anchoredPosition.y), 1)/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
             Debug.Log("game won");
         }
         else
         {
+            GameOverObjectsPanel.anchoredPosition = new Vector2(-125, GameOverObjectsPanel.anchoredPosition.y);
             Debug.Log("game lost");
             GameOverText.text = "Don't Give Up Yet!";
-            LeanTween.moveLocalX(GameOverObjectsPanel.gameObject, GameOverObjectsPanel.anchoredPosition.x - 225, 0)/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
+            LeanTween.move(GameOverObjectsPanel, new Vector2(GameOverObjectsPanel.anchoredPosition.x - 225, GameOverObjectsPanel.anchoredPosition.y), 0);/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
         }
         NextLevelButton.interactable = gameWon;
         yield return null;

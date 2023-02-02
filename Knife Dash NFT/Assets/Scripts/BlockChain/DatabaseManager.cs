@@ -62,7 +62,7 @@ public class DatabaseManager : MonoBehaviour
                     data = new LocalData();
 
                     data.StarsPerLevel = new List<int>();
-                    for (int i = 0; i < 50; i++)
+                    for (int i = 0; i < 15; i++)
                     {
                         data.StarsPerLevel.Add(0);
                     }

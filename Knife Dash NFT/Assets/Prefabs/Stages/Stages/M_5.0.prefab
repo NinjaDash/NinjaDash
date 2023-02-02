@@ -22992,7 +22992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2965291414483052674, guid: 2175805a785c96443bdd46bcd8f1f06d, type: 3}
       propertyPath: LevelID
-      value: 33
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2965291414483052674, guid: 2175805a785c96443bdd46bcd8f1f06d, type: 3}
       propertyPath: GameType
