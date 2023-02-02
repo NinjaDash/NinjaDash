@@ -201,6 +201,7 @@ public class LevelDataHolder : MonoBehaviour
 
     public void SaveStarsAmount()
     {
+        Debug.Log(StarsEarned);
         LocalData data = DatabaseManager.Instance.GetLocalData();
         int reward = 0;
         int PreviousRecord = data.StarsPerLevel[LevelID];

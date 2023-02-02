@@ -778,6 +778,8 @@ public class CoreWeb3Manager : MonoBehaviour
     async public void getDailyToken()
     {
 
+        if (MessageBox.insta) MessageBox.insta.showMsg("Claiming Token! This might take some time.", false);
+
         object[] inputParams = { };
         string method = "GetGameToken"; // buyBurnItem";// "buyCoins";
 
@@ -819,7 +821,7 @@ public class CoreWeb3Manager : MonoBehaviour
         }
         else
         {
-           // if (MessaeBox.insta) MessaeBox.insta.showMsg("Server Error", true);
+            if (MessageBox.insta) MessageBox.insta.showMsg("Server Error", true);
             Debug.Log("In check blank");
         }
 

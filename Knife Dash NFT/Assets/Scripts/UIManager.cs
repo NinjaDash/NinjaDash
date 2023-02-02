@@ -39,6 +39,7 @@ public class UIManager : MonoBehaviour
     public GameObject GameplayUI;
     public GameObject MainMenuUI;
     public GameObject GameOverUI;
+    public GameObject claimTokenBTN;
     public GameObject PauseMenuUI;
     public GameObject SkipLevelBox;
     public GameObject NoInteractionPopUp;
@@ -67,7 +68,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button NextDialogueButton;
     [SerializeField] TextMeshProUGUI DialogueBox;
     [SerializeField] Queue<String> Dialogue_Sentences = new Queue<string>();
-    
+
 
 
     #region dialogue System
@@ -187,7 +188,7 @@ public class UIManager : MonoBehaviour
             StarTexts[i].isCompleted = false;
             StarTexts[i].StarTextTransform.gameObject.SetActive(false);
             DisplayStars[i].gameObject.SetActive(false);
-           
+
         }
         RewardAmount = 0;
         RewardText.text = "";
@@ -252,26 +253,26 @@ public class UIManager : MonoBehaviour
     public int RewardAmount;
     public TextMeshProUGUI RewardText;
     [System.Serializable]
-    public class ReSortStarstext:IComparable
+    public class ReSortStarstext : IComparable
     {
         public Transform StarTextTransform;
         public bool isCompleted = false;
         public string StarType;
         public Image Icon;
-        
+
 
         public int CompareTo(object obj)
         {
             return isCompleted ? 1 : 0;
         }
     }
-   
+
 
     internal void showGameOverPanel(bool gameWon)
     {
         StartCoroutine(ShowGameOverCO(gameWon));
     }
-    internal void taskCompleted(string v,int index)
+    internal void taskCompleted(string v, int index)
     {
         for (int i = 0; i < StarTexts.Count; i++)
         {
@@ -295,6 +296,7 @@ public class UIManager : MonoBehaviour
             LevelManager.CurrentLevelComplete();
 
             StarTexts.Sort((x, y) => y.CompareTo(x));
+            int totalStars = 0;
             for (int i = 0; i < StarTexts.Count; i++)
             {
                 int temp = i;
@@ -308,11 +310,15 @@ public class UIManager : MonoBehaviour
                 DisplayStars[temp].gameObject.SetActive(true);
                 //LeanTween.alpha(StarTexts[temp].StarTextTransform.gameObject, 1, 1).setFrom(0);
                 yield return new WaitForSeconds(0.5f);
+                totalStars += StarTexts[temp].isCompleted ? 1 : 0;
             }
+
+            claimTokenBTN.SetActive(totalStars == 3);
+
             if (RewardAmount > 0) RewardText.gameObject.SetActive(true);
             LeanTween.value(0, RewardAmount, 2).setEaseInQuad().setOnUpdate((float value) => RewardText.text = "+" + value.ToString("F0"));
             yield return new WaitForSeconds(2);
-            LeanTween.moveLocalX(GameOverObjectsPanel.gameObject, GameOverObjectsPanel.anchoredPosition.x - 225, 1).setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true); ;
+            LeanTween.moveLocalX(GameOverObjectsPanel.gameObject, GameOverObjectsPanel.anchoredPosition.x - 225, 1)/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
             Debug.Log("game won");
         }
         else
@@ -325,6 +331,15 @@ public class UIManager : MonoBehaviour
     }
 
 
+    #endregion
+
+    #region Token Claim
+
+    public void ClaimToken()
+    {
+        claimTokenBTN.SetActive(false);
+        CoreWeb3Manager.Instance.getDailyToken();
+    }
     #endregion
 
     public void QuitApllication()

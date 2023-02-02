@@ -17,9 +17,9 @@ public class MyNFTCollection : MonoBehaviour
 
     [SerializeField] GameObject LoadingMyCollection;
     [SerializeField] GameObject MyCollectionObject;
-           
 
-    
+
+    [SerializeField] TMP_Text[] priceTexts;
     
 
     private void Awake()
@@ -33,14 +33,14 @@ public class MyNFTCollection : MonoBehaviour
         LoadingMyCollection.SetActive(true);
         MyCollectionObject.SetActive(false);
 
-
+        for (int i = 0; i < DatabaseManager.Instance.allMetaDataServer.Count; i++)
+        {
+            priceTexts[i].text = DatabaseManager.Instance.allMetaDataServer[i].cost.ToString();
+        }
         await CoreWeb3Manager.Instance.CheckPuzzleList();
 
-        
         SetNewData();
 
-       
-           
         LoadingMyCollection.SetActive(false);
         MyCollectionObject.SetActive(true);
        

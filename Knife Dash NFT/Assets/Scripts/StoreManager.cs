@@ -38,7 +38,7 @@ public class StoreManager : MonoBehaviour
         }
         else
         {
-            int cost = skinPrices[ID];            
+            int cost = DatabaseManager.Instance.allMetaDataServer[ID-1].cost;            
             if (data.coins >= cost)
             {
                 Debug.Log("0 got added" + ID);                
@@ -49,6 +49,7 @@ public class StoreManager : MonoBehaviour
             }
             else
             {
+                MessageBox.insta.showMsg("Not Enough Money", true);
                 Debug.Log("Not Enough Money");
             }
         }
