@@ -40,6 +40,7 @@ public class UIManager : MonoBehaviour
     public GameObject MainMenuUI;
     public GameObject GameOverUI;
     public GameObject claimTokenBTN;
+    public GameObject nextLevelBTN;
     public GameObject PauseMenuUI;
     public GameObject SkipLevelBox;
     public GameObject NoInteractionPopUp;
@@ -289,9 +290,14 @@ public class UIManager : MonoBehaviour
         Debug.Log("Showing game over panel");
         GameOverUI.SetActive(true);
         claimTokenBTN.SetActive(false);
+
+        nextLevelBTN.SetActive(LevelManager.CurrentLevel!=14);
+        
         GameOverUI.GetComponent<ScrollRect>().enabled = false;
+        NextLevelButton.interactable = gameWon;
         if (gameWon)
         {
+
             GameOverObjectsPanel.anchoredPosition = new Vector2(-125, GameOverObjectsPanel.anchoredPosition.y);
             GameOverText.text = "Level Completed!";
             LevelManager.CurrentLevelComplete();
@@ -329,7 +335,7 @@ public class UIManager : MonoBehaviour
             GameOverText.text = "Don't Give Up Yet!";
             LeanTween.move(GameOverObjectsPanel, new Vector2(GameOverObjectsPanel.anchoredPosition.x - 225, GameOverObjectsPanel.anchoredPosition.y), 0);/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
         }
-        NextLevelButton.interactable = gameWon;
+       
         yield return null;
     }
 
