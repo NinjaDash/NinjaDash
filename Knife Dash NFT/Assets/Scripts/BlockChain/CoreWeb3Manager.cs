@@ -40,7 +40,7 @@ public class CoreWeb3Manager : MonoBehaviour
     const string chain = "";
     const string network = "";
     const string chainId = "3141";
-    static string networkRPC= "https://api.hyperspace.node.glif.io/rpc/v0";
+    static string networkRPC= "https://api.hyperspace.node.glif.io/rpc/v1";
 
 
 
