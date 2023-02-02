@@ -288,6 +288,7 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("Showing game over panel");
         GameOverUI.SetActive(true);
+        claimTokenBTN.SetActive(false);
         GameOverUI.GetComponent<ScrollRect>().enabled = false;
         if (gameWon)
         {
@@ -325,6 +326,7 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log("game lost");
             GameOverText.text = "Don't Give Up Yet!";
+            LeanTween.moveLocalX(GameOverObjectsPanel.gameObject, GameOverObjectsPanel.anchoredPosition.x - 225, 0)/*.setOnComplete(() => GameOverUI.GetComponent<ScrollRect>().enabled = true)*/;
         }
         NextLevelButton.interactable = gameWon;
         yield return null;
