@@ -7189,7 +7189,7 @@ RectTransform:
   m_Father: {fileID: 526218254}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.48623848}
+  m_AnchorMin: {x: 0, y: 0.26315784}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -14501,8 +14501,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 371884984}
   m_HandleRect: {fileID: 371884983}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.5137615
+  m_Value: 1.0000004
+  m_Size: 0.73684216
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25564,6 +25564,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!114 &1196953670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30741,6 +30742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skin Icon Prefab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1824998173348503316, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1824998173348503318, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -30855,7 +30860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3317301167633076039, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
       propertyPath: m_fontSize
-      value: 25.55
+      value: 21.8
       objectReference: {fileID: 0}
     - target: {fileID: 3317301167633076039, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
       propertyPath: m_fontAsset
@@ -30972,17 +30977,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1824998173348503319, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
   m_PrefabInstance: {fileID: 1370811321}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1370811323 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895051134391307348, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
-  m_PrefabInstance: {fileID: 1370811321}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1381226082
 GameObject:
   m_ObjectHideFlags: 0
@@ -31436,8 +31430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 236.5, y: -272.5}
-  m_SizeDelta: {x: 433, y: 545}
+  m_AnchoredPosition: {x: 236.5, y: -190}
+  m_SizeDelta: {x: 433, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386816480
 MonoBehaviour:
@@ -40098,7 +40092,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 545}
+  m_SizeDelta: {x: 0, y: 380}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1810928092
 MonoBehaviour:
@@ -41441,6 +41435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skin Icon Prefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1824998173348503316, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1824998173348503318, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -41555,7 +41553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3317301167633076039, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
       propertyPath: m_fontSize
-      value: 25.55
+      value: 21.8
       objectReference: {fileID: 0}
     - target: {fileID: 3317301167633076039, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
       propertyPath: m_fontAsset
@@ -41672,17 +41670,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1824998173348503319, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
   m_PrefabInstance: {fileID: 1883022528}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1883022530 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7895051134391307348, guid: 74c29a41225e651428ee0b795dff6319, type: 3}
-  m_PrefabInstance: {fileID: 1883022528}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1890521856
 GameObject:
   m_ObjectHideFlags: 0
@@ -42804,15 +42791,11 @@ MonoBehaviour:
   - {fileID: 2445544480920059359, guid: 157fc3ed7c099fe4c82f52553edbda57, type: 3}
   - {fileID: 6993694741243093670, guid: 2b50b8737505e2848bea125e1004f1b9, type: 3}
   - {fileID: 8193816519540685609, guid: f49db07f5bae9244580ead370539e78b, type: 3}
-  - {fileID: 192394447003202915, guid: f5e31ea68f6a3a14592da4df8490e25d, type: 3}
-  - {fileID: 1213001429891835350, guid: 07bc54131532ca84b8a07f7013abd494, type: 3}
   CoinShopPanel: {fileID: 727636029}
   skinStatusText:
   - {fileID: 1824998173622506934}
   - {fileID: 662653145}
   - {fileID: 563777805}
-  - {fileID: 1883022530}
-  - {fileID: 1370811323}
   skinPrices: 0000000019000000190000001900000019000000
 --- !u!4 &1973473822
 Transform:
