@@ -155,3 +155,6 @@ function getCurrentTime() public view returns(uint256 _result){
 }
 }
 ```
+
+![Ninja Dash Game](NinjaDash/ImageAssets/Screenshot_6.jpg)
+![Ninja Dash Game](NinjaDash/ImageAssets/Screenshot_5.jpg)
