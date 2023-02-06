@@ -16,7 +16,7 @@
 
 ## Technologies  ***(Click on link to know more about use)***
 - FVM Hyperspace Testnet blockchain to play (NFT, DeFi, Game Token etc)
-  * [FVM Hyperspace Testnet](https://github.com/MetaPuzzleGame/MetaPuzzleGameSource/blob/main/Aurora.md)
+  * [FVM Hyperspace Testnet](https://github.com/NinjaDash/NinjaDash/blob/main/FVMTestnet.md)
 - [IPFS/Filecoins used to host game, all NFT theme data and user created maze data including metadata and images](https://github.com/MetaPuzzleGame/MetaPuzzleGameSource/blob/main/NFT.Storage(IPFS-Filecoin).md)
 - Remix IDE used to create smart contract for ERC-1155 NFT, ERC-20 game token and in-app purchase for coins
 - Unity Game Engine and Web3 Libraries
