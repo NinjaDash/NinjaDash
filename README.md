@@ -4,7 +4,7 @@
 
 ### Ninja Dash is amazing platformer game loaded with FVM web3 features and full of fun.
 
-### [Click here to Play](https://bafybeig37hyc7qgekkm6m724p72mehunxm3cgyndi27mgtvruc2xwgfsuu.ipfs.gateway.valist.io/)
+### [Click here to Play](https://www.thundergamestudio.com/web3/ninjadash/)
 
 ## Features
 - Amazing platformer game loaded with FVM web3 features
