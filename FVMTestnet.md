@@ -20,7 +20,7 @@ https://github.com/NinjaDash/NinjaDash/blob/main/NinjaDash/Assets/Scripts/BlockC
 
 ### Smart contract for
 * Reward game token mint ERC-20
-* Decentralized Finanace with in-game purchase of coins
+* Decentralized Finance with in-game purchase of coins
 * Unlock Characters as NFT and mint NFT
 * Smart contract different function calls to check balance of NFT, tokens, native balance etc
 
@@ -78,12 +78,12 @@ contract NinjaDashEthToken is ERC20 {
         _transfer(address(this), msg.sender, amount * 10 ** 18);
     }
 
-        // Allow you to show how many tokens owns this smart contract
+        // Allow you to show how many tokens this smart contract owns
     function GetSmartContractBalance() external view returns(uint) {
         return _token.balanceOf(address(this));
     }
 
-     // Allow you to show how many tokens owns this user 
+     // Allow you to show how many tokens this user owns
     function GetuserBalance(address _account) public view returns(uint256) {
         uint256 Bal = _token.balanceOf(_account);
         return Bal;

@@ -2,16 +2,16 @@
 
 
 
-### Ninja Dash is amazing platformer game loaded with FVM web3 features and full of fun.
+### Ninja Dash is an amazing platformer game loaded with FVM web3 features and full of fun.
 
 ### [Click here to Play](https://www.thundergamestudio.com/web3/ninjadash/)
 
 ## Features
 - Amazing platformer game loaded with FVM web3 features
 - Decentralized finance system with in-game store
-- Get FREE in game token when you complete level with 3 stars
+- Get FREE in-game token when you complete level with 3 stars
 - Unlock characters as NFT
-- Get coins with in exchange of tokens or buy from native FVM balance
+- Get coins in exchange of tokens or buy from native FVM balance
 
 
 ## Technologies  ***(Click on link to know more about use)***
